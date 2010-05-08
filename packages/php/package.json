@@ -1,0 +1,27 @@
+{
+    "uid": "http://registry.pinf.org/cadorn.org/github/renderers/packages/php/",
+    "name": "php",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/cadorn/renderers.git",
+            "path": "packages/php"
+        }
+    ],
+    "using": {
+        "domplate": {
+            "catalog": "http://registry.pinf.org/cadorn.org/github/catalog.json",
+            "name": "domplate",
+            "revision": "master"
+        }
+    },
+    "implements": {
+        "http://registry.pinf.org/cadorn.org/insight/@meta/renderer/0.1.0": {
+            "renderers": {
+                "external-variables": {
+                    "type": "domplate"
+                }
+            }
+        }
+    }
+}
