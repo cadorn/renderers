@@ -9,6 +9,11 @@
         }
     ],
     "using": {
+        "insight": {
+            "catalog": "http://registry.pinf.org/cadorn.org/github/renderers/packages/catalog.json",
+            "name": "insight",
+            "revision": "master"
+        },
         "domplate": {
             "catalog": "http://registry.pinf.org/cadorn.org/github/catalog.json",
             "name": "domplate",

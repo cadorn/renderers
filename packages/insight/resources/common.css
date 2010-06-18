@@ -1,0 +1,320 @@
+
+
+/*######################################################################
+#   primitives/text
+#####################################################################*/
+
+SPAN.__KEY__text {
+}
+
+
+
+/*######################################################################
+#   primitives/constant
+#####################################################################*/
+
+SPAN.__KEY__constant {
+  color: #0000FF;
+}
+
+
+
+/*######################################################################
+#   primitives/array
+#####################################################################*/
+
+SPAN.__KEY__array > SPAN {
+    color: #9C9C9C;
+    font-weight: bold;
+}
+
+SPAN.__KEY__array > SPAN.collapsed {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__array > SPAN.summary {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__array > DIV.element {
+    display: block;
+    padding-left: 20px;
+}
+
+SPAN.__KEY__array > SPAN.element {
+    padding-left: 2px;
+}
+
+SPAN.__KEY__array > DIV.element.expandable {
+    background-image: url(__RESOURCE__images/TwistyClosed.png);
+    background-repeat: no-repeat;
+    background-position: 6px 2px;
+}
+SPAN.__KEY__array > DIV.element.expandable.expanded {
+    background-image: url(__RESOURCE__images/TwistyOpen.png);
+}
+
+SPAN.__KEY__array > .element > SPAN.value {
+}
+
+SPAN.__KEY__array > .element > SPAN.separator {
+    color: #9C9C9C;
+}
+
+
+
+/*######################################################################
+#   primitives/map
+#####################################################################*/
+
+SPAN.__KEY__map > SPAN {
+    color: #9C9C9C;
+    font-weight: bold;
+}
+
+SPAN.__KEY__map > DIV.pair {
+    display: block;
+    padding-left: 20px;
+}
+
+SPAN.__KEY__map > SPAN.pair {
+    padding-left: 2px;
+}
+
+SPAN.__KEY__map > .pair > SPAN.delimiter,
+SPAN.__KEY__map > .pair > SPAN.separator {
+    color: #9C9C9C;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+
+
+/*######################################################################
+#   primitives/reference
+#####################################################################*/
+
+SPAN.__KEY__reference {
+}
+
+
+
+/*######################################################################
+#   primitives/dictionary
+#####################################################################*/
+
+
+SPAN.__KEY__dictionary > SPAN {
+    color: #9C9C9C;
+}
+
+SPAN.__KEY__dictionary > SPAN.collapsed {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__dictionary > SPAN.summary {
+    color: #0000FF;
+    font-weight: normal;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+SPAN.__KEY__dictionary > SPAN.member {
+    color: #9C9C9C;
+}
+
+SPAN.__KEY__dictionary > DIV.member {
+    display: block;
+    padding-left: 20px;
+}
+SPAN.__KEY__dictionary > DIV.member.expandable {
+    background-image: url(__RESOURCE__images/TwistyClosed.png);
+    background-repeat: no-repeat;
+    background-position: 6px 2px;
+}
+SPAN.__KEY__dictionary > DIV.member.expandable.expanded {
+    background-image: url(__RESOURCE__images/TwistyOpen.png);
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.name {
+    color: #E59D07;
+    font-weight: normal;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.value {
+    font-weight: normal;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.delimiter,
+SPAN.__KEY__dictionary > .member > SPAN.separator,
+SPAN.__KEY__dictionary > .member SPAN.more {
+    color: #9C9C9C;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+
+/*######################################################################
+#   primitives/unknown
+#####################################################################*/
+
+
+SPAN.__KEY__unknown {
+    color: #FFFFFF;
+    background-color: red;
+}
+
+
+/*######################################################################
+#   structures/trace
+#####################################################################*/
+
+SPAN.__KEY__structures-trace {
+    background-image: url(__RESOURCE__images/edit_rule.png);
+    background-repeat: no-repeat;
+    background-position: 4px 1px;
+    padding-left: 25px;
+    font-weight: bold;
+}
+
+DIV.__KEY__structures-trace {
+    padding: 0px;
+    margin: 0px;
+}
+
+DIV.__KEY__structures-trace TABLE {
+  border-bottom: 1px solid #D7D7D7;
+}
+
+DIV.__KEY__structures-trace TABLE TBODY TR TH.header-file {
+  white-space:nowrap;
+  font-weight: bold;
+  text-align: left;
+}
+
+DIV.__KEY__structures-trace TABLE TBODY TR TH.header-line {
+  white-space:nowrap;
+  font-weight: bold;
+  text-align: right;
+}
+DIV.__KEY__structures-trace TABLE TBODY TR TH.header-inst {
+  white-space:nowrap;
+  font-weight: bold;
+  padding-left: 10px;
+  text-align: left;
+}
+
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-file {
+  vertical-align: top;
+  padding-right: 10px;
+  border: 1px solid #D7D7D7;
+  border-bottom: 0px;
+  border-right: 0px;
+}
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-line {
+  white-space:nowrap;
+  vertical-align: top;
+  text-align: right;
+  border:1px solid #D7D7D7;
+  border-bottom: 0px;
+  border-right: 0px;
+}
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-line:hover,
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-file:hover {
+    background-color: #ffc73d;
+    cursor: pointer;    
+}
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-inst {
+  vertical-align: top;
+  padding-left: 10px;
+  font-weight: bold;
+  border:1px solid #D7D7D7;
+  border-bottom: 0px;
+}
+
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-inst DIV.arg {
+  font-weight: normal;
+  padding-left: 3px;
+  padding-right: 3px;
+  display: inline-block;
+}
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-inst DIV.arg:hover {
+    background-color: #ffc73d;
+    cursor: pointer;    
+}
+
+DIV.__KEY__structures-trace TABLE TBODY TR TD.cell-inst .separator {
+    padding-left: 1px;
+    padding-right: 3px;
+}
+
+
+/*######################################################################
+#   structures/table
+#####################################################################*/
+
+SPAN.__KEY__structures-table {
+    background-image: url(__RESOURCE__images/table.png);
+    background-repeat: no-repeat;
+    background-position: 4px -1px;
+    padding-left: 25px;
+}
+
+DIV.__KEY__structures-table {
+    padding: 0px;
+    margin: 0px;
+}
+
+DIV.__KEY__structures-table TABLE {
+  border-bottom: 1px solid #D7D7D7;
+  border-right: 1px solid #D7D7D7;
+}
+
+DIV.__KEY__structures-table TABLE TBODY TR TH.header {
+  vertical-align: top;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #D7D7D7;
+  border-bottom: 0px;
+  border-right: 0px;
+  background-color: #ececec;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+DIV.__KEY__structures-table TABLE TBODY TR TD.cell {
+  vertical-align: top;
+  padding-right: 10px;
+  border: 1px solid #D7D7D7;
+  border-bottom: 0px;
+  border-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+DIV.__KEY__structures-table TABLE TBODY TR TD.cell:hover {
+    background-color: #ffc73d;
+    cursor: pointer;    
+}
+
+
+/*######################################################################
+#   util/trimmed
+#####################################################################*/
+
+SPAN.__KEY__util-trimmed {
+    color: #FFFFFF;
+    background-color: blue;
+    padding-left: 5px;
+    padding-right: 5px;
+}

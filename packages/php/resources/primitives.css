@@ -1,0 +1,143 @@
+
+
+/*######################################################################
+#   primitives/array
+#####################################################################*/
+
+SPAN.__KEY__map > SPAN {
+    color: green;
+    font-weight: normal;
+}
+
+SPAN.__KEY__map > .pair > SPAN.delimiter,
+SPAN.__KEY__map > .pair > SPAN.separator {
+    color: green;
+}
+
+SPAN.__KEY__array > SPAN {
+    color: green;
+    font-weight: normal;
+}
+
+SPAN.__KEY__array > .element > SPAN.separator {
+    color: green;
+}
+
+/*######################################################################
+#   primitives/boolean
+#####################################################################*/
+
+SPAN.__KEY__boolean {
+    color: navy;
+}
+
+
+/*######################################################################
+#   primitives/exception
+#####################################################################*/
+
+SPAN.__KEY__exception {
+    font-weight: bold;
+    color: red;
+}
+
+
+/*######################################################################
+#   primitives/float
+#####################################################################*/
+
+SPAN.__KEY__float {
+    color: green;
+}
+
+
+/*######################################################################
+#   primitives/integer
+#####################################################################*/
+
+SPAN.__KEY__integer {
+    color: green;
+}
+
+
+/*######################################################################
+#   primitives/null
+#####################################################################*/
+
+SPAN.__KEY__null {
+    color: navy;
+}
+
+
+/*######################################################################
+#   primitives/object
+#####################################################################*/
+
+
+SPAN.__KEY__dictionary > SPAN {
+    color: brown;
+    font-weight: bold;
+}
+
+SPAN.__KEY__dictionary > DIV.member {
+    display: block;
+    padding-left: 20px;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.name {
+    color: black;
+    padding-left: 12px;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=private-static] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -2px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=protected-static] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -18px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=public-static] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -34px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=undeclared-static] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -50px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=private] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -66px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=protected] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -82px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=public] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -98px;
+}
+SPAN.__KEY__dictionary > .member > SPAN.name[decorator=undeclared] {
+  background: url(__RESOURCE__images/object_member_visibility_sprite.png) no-repeat -4px -114px;
+}
+
+SPAN.__KEY__dictionary > .member > SPAN.delimiter,
+SPAN.__KEY__dictionary > .member > SPAN.separator,
+SPAN.__KEY__dictionary > .member SPAN.more {
+    color: brown;
+}
+
+
+/*######################################################################
+#   primitives/resource
+#####################################################################*/
+
+SPAN.__KEY__resource {
+    color: navy;
+}
+
+
+/*######################################################################
+#   primitives/string
+#####################################################################*/
+
+SPAN.__KEY__string {
+    color: black;
+}
+
+SPAN.__KEY__string[wrapped=true] {
+    color: red;
+}
