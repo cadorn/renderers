@@ -101,7 +101,7 @@ exports.onLoad = template.onLoad = function(pack, tags){with(tags) {
         
         dictionaryIterator: function(node, type) {
             var members = [];
-            if(!node.value) return members;
+            if(!node.value || node.value.length==0) return members;
             for( var name in node.value ) {
 
                 var member = {

@@ -13,6 +13,9 @@ template.onLoad = function(pack, tags){with(tags) {
         tag:
             SPAN({"class": pack.__KEY__+"float"}, "$node|getValue"),
 
+        shortTag:
+            SPAN({"class": pack.__KEY__+"float"}, "$node|getValue"),
+
         getValue: function(node) {
             return addCommas(node.value);
         }    

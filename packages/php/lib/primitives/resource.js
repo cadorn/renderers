@@ -13,6 +13,9 @@ template.onLoad = function(pack, tags){with(tags) {
         tag:
             SPAN({"class": pack.__KEY__+"resource"}, "[$node|getValue]"),
 
+        shortTag:
+            SPAN({"class": pack.__KEY__+"resource"}, "[$node|getValue]"),
+
         getValue: function(node) {
             return node.value.toUpperCase();
         }    

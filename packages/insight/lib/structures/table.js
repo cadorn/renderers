@@ -47,7 +47,7 @@ template.onLoad = function(pack, tags){with(tags) {
 
         getHeaders: function(node) {
             var header = node.compact().header;
-            if(!header || header.value=="false") {
+            if(!header || header.type!="array") {
                 return [];
             }
             var items = [];
@@ -62,17 +62,23 @@ template.onLoad = function(pack, tags){with(tags) {
         },
 
         getRows: function(node) {
-            return node.compact().data.value;
+            var data = node.compact().data;
+            if(!data || data.type!="array") {
+                return [];
+            }
+            return data.value;
         },
-        
+
         getCells: function(node) {
             var items = [];
-            for (var i = 0; i < node.value.length; i++) {
-                var rep = this.getRepForNode(node.value[i], true);
-                items.push({
-                    "node": template.merge(node.value[i], {"wrapped": false}),
-                    "tag": rep.shortTag || rep.tag
-                });
+            if(node.value) {
+                for (var i = 0; i < node.value.length; i++) {
+                    var rep = this.getRepForNode(node.value[i], true);
+                    items.push({
+                        "node": template.merge(node.value[i], {"wrapped": false}),
+                        "tag": rep.shortTag || rep.tag
+                    });
+                }
             }
             return items;
         },
