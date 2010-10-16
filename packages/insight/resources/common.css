@@ -55,6 +55,7 @@ SPAN.__KEY__array > DIV.element.expandable {
     background-image: url(__RESOURCE__images/TwistyClosed.png);
     background-repeat: no-repeat;
     background-position: 6px 2px;
+    cursor: pointer;
 }
 SPAN.__KEY__array > DIV.element.expandable.expanded {
     background-image: url(__RESOURCE__images/TwistyOpen.png);
@@ -141,6 +142,7 @@ SPAN.__KEY__dictionary > DIV.member.expandable {
     background-image: url(__RESOURCE__images/TwistyClosed.png);
     background-repeat: no-repeat;
     background-position: 6px 2px;
+    cursor: pointer;
 }
 SPAN.__KEY__dictionary > DIV.member.expandable.expanded {
     background-image: url(__RESOURCE__images/TwistyOpen.png);
