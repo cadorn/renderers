@@ -90,7 +90,7 @@ exports.onLoad = template.onLoad = function(pack, tags){with(tags) {
             for( var i=0 ; i<node.value.length ; i++ ) {
                 
                 var element = {
-                    "node": node.value[i],
+                    "node": template.merge(node.value[i], {"wrapped": true}),
                     "more": (i<node.value.length-1),
                     "expandable": this.isExpandable(node.value[i])
                 };
