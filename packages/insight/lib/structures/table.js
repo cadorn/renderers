@@ -1,5 +1,5 @@
 
-var TRACING_CONSOLE = require("tracing-console", "registry.pinf.org/cadorn.org/github/fireconsole/packages/firefox-extension/packages/firebug/master");
+//var TRACING_CONSOLE = require("tracing-console", "registry.pinf.org/cadorn.org/github/fireconsole/packages/firefox-extension/packages/firebug/master");
 
 
 var TEMPLATE = require("template", "private-registry.appspot.com/cadorn.com/packages/devcomp/packages/template-pack/master");
@@ -79,6 +79,13 @@ template.onLoad = function(pack, tags){with(tags) {
                         "tag": rep.shortTag || rep.tag
                     });
                 }
+            } else
+            if(node.meta && node.meta['encoder.trimmed']) {
+                var rep = this.getRepForNode(node, true);
+                items.push({
+                    "node": template.merge(node, {"wrapped": false}),
+                    "tag": rep.shortTag || rep.tag
+                });
             }
             return items;
         },
