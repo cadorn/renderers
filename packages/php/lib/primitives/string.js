@@ -1,4 +1,7 @@
 
+var TRACING_CONSOLE = require("tracing-console", "registry.pinf.org/cadorn.org/github/fireconsole/packages/firefox-extension/packages/firebug/master");
+
+
 var TEMPLATE = require("template", "private-registry.appspot.com/cadorn.com/packages/devcomp/packages/template-pack/master");
 var template = exports.template = TEMPLATE.Template(module);
 
@@ -29,7 +32,11 @@ template.onLoad = function(pack, tags){with(tags) {
         },
         
         getShortValue: function(node) {
-            return cropString(node.value);
+            if(!node.parentNode) {
+                return node.value;
+            } else {
+                return cropString(node.value);
+            }
         }    
     }    
 }};
