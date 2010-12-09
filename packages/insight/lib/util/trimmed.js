@@ -7,10 +7,10 @@ var TEMPLATE = require("template", "private-registry.appspot.com/cadorn.com/pack
 var template = exports.template = TEMPLATE.Template(module);
 
 template.supportsNode = function(node) {
-    return (node.meta && node.meta["encoder.trimmed"]);
+    return (node.meta && node.meta["encoder.trimmed"] && !node.meta["encoder.trimmed.partial"]);
 };
 
-template.onLoad = function(pack, tags){with(tags) {
+exports.onLoad = template.onLoad = function(pack, tags){with(tags) {
 
     return {
 
