@@ -21,12 +21,8 @@ template.onLoad = function(pack, tags){with(tags) {
 
         cropString: function(text, limit){
             text = text + "";
-            
-            if (!limit) {
-                var halfLimit = 50;
-            } else {
-                var halfLimit = limit / 2;
-            }            
+            limit = limit || 50;
+            var halfLimit = limit / 2;
             if (text.length > limit) {
                 return this.escapeNewLines(text.substr(0, halfLimit) + "..." + text.substr(text.length - halfLimit));
             } else {
